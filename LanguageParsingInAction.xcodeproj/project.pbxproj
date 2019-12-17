@@ -11,6 +11,9 @@
 		EBB935FB239BDF3000F75E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB935FA239BDF3000F75E7C /* ViewController.swift */; };
 		EBB935FD239BDF3200F75E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB935FC239BDF3200F75E7C /* Assets.xcassets */; };
 		EBB93600239BDF3200F75E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB935FE239BDF3200F75E7C /* Main.storyboard */; };
+		EBB93613239BDFC300F75E7C /* Parser.ym in Sources */ = {isa = PBXBuildFile; fileRef = EBB9360B239BDF9D00F75E7C /* Parser.ym */; };
+		EBB93614239BDFC600F75E7C /* Lexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = EBB9360D239BDF9D00F75E7C /* Lexer.lm */; };
+		EBB93617239BE09200F75E7C /* MessageBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB93616239BE09200F75E7C /* MessageBlocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,11 @@
 		EBB935FF239BDF3200F75E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB93601239BDF3200F75E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB93602239BDF3200F75E7C /* LanguageParsingInAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LanguageParsingInAction.entitlements; sourceTree = "<group>"; };
+		EBB9360B239BDF9D00F75E7C /* Parser.ym */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.yacc; path = Parser.ym; sourceTree = "<group>"; };
+		EBB9360D239BDF9D00F75E7C /* Lexer.lm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.lex; path = Lexer.lm; sourceTree = "<group>"; };
+		EBB93615239BE09200F75E7C /* MessageBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageBlocks.h; sourceTree = "<group>"; };
+		EBB93616239BE09200F75E7C /* MessageBlocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageBlocks.m; sourceTree = "<group>"; };
+		EBB93618239BE1D000F75E7C /* LanguageParsingInAction-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LanguageParsingInAction-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +61,43 @@
 		EBB935F7239BDF3000F75E7C /* LanguageParsingInAction */ = {
 			isa = PBXGroup;
 			children = (
+				EBB93608239BDF9D00F75E7C /* Parser */,
 				EBB935F8239BDF3000F75E7C /* AppDelegate.swift */,
 				EBB935FA239BDF3000F75E7C /* ViewController.swift */,
+				EBB93618239BE1D000F75E7C /* LanguageParsingInAction-Bridging-Header.h */,
 				EBB935FC239BDF3200F75E7C /* Assets.xcassets */,
 				EBB935FE239BDF3200F75E7C /* Main.storyboard */,
 				EBB93601239BDF3200F75E7C /* Info.plist */,
 				EBB93602239BDF3200F75E7C /* LanguageParsingInAction.entitlements */,
 			);
 			path = LanguageParsingInAction;
+			sourceTree = "<group>";
+		};
+		EBB93608239BDF9D00F75E7C /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EBB9360A239BDF9D00F75E7C /* Source */,
+				EBB9360E239BDF9D00F75E7C /* Generated-Code */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		EBB9360A239BDF9D00F75E7C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EBB9360B239BDF9D00F75E7C /* Parser.ym */,
+				EBB9360D239BDF9D00F75E7C /* Lexer.lm */,
+				EBB93615239BE09200F75E7C /* MessageBlocks.h */,
+				EBB93616239BE09200F75E7C /* MessageBlocks.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EBB9360E239BDF9D00F75E7C /* Generated-Code */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Generated-Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB93613239BDFC300F75E7C /* Parser.ym in Sources */,
 				EBB935FB239BDF3000F75E7C /* ViewController.swift in Sources */,
 				EBB935F9239BDF3000F75E7C /* AppDelegate.swift in Sources */,
+				EBB93617239BE09200F75E7C /* MessageBlocks.m in Sources */,
+				EBB93614239BDFC600F75E7C /* Lexer.lm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +321,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jraufeisen.LanguageParsingInAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LanguageParsingInAction/LanguageParsingInAction-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -301,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jraufeisen.LanguageParsingInAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LanguageParsingInAction/LanguageParsingInAction-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
