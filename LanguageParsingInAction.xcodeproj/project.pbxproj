@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB43197B23AADCE200ACC7CC /* YYresultType.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43197A23AADCE200ACC7CC /* YYresultType.m */; };
 		EBB935F9239BDF3000F75E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB935F8239BDF3000F75E7C /* AppDelegate.swift */; };
 		EBB935FB239BDF3000F75E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB935FA239BDF3000F75E7C /* ViewController.swift */; };
 		EBB935FD239BDF3200F75E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB935FC239BDF3200F75E7C /* Assets.xcassets */; };
@@ -18,8 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB43197923AADCD900ACC7CC /* YYresultType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYresultType.h; sourceTree = "<group>"; };
-		EB43197A23AADCE200ACC7CC /* YYresultType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYresultType.m; sourceTree = "<group>"; };
 		EBB935F5239BDF3000F75E7C /* LanguageParsingInAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageParsingInAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB935F8239BDF3000F75E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB935FA239BDF3000F75E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,8 +88,6 @@
 				EBB9360B239BDF9D00F75E7C /* Parser.ym */,
 				EBB93615239BE09200F75E7C /* MessageBlocks.h */,
 				EBB93616239BE09200F75E7C /* MessageBlocks.m */,
-				EB43197923AADCD900ACC7CC /* YYresultType.h */,
-				EB43197A23AADCE200ACC7CC /* YYresultType.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -169,7 +164,6 @@
 			files = (
 				EBB93613239BDFC300F75E7C /* Parser.ym in Sources */,
 				EBB935FB239BDF3000F75E7C /* ViewController.swift in Sources */,
-				EB43197B23AADCE200ACC7CC /* YYresultType.m in Sources */,
 				EBB935F9239BDF3000F75E7C /* AppDelegate.swift in Sources */,
 				EBB93617239BE09200F75E7C /* MessageBlocks.m in Sources */,
 				EBB93614239BDFC600F75E7C /* Lexer.lm in Sources */,

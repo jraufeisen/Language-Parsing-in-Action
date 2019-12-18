@@ -3,14 +3,11 @@
     // We can embed Objective-C code inside the .lex or .yacc file
     // Either enclose the code with %{ and %}
     // Or indent code with a TAB
-
+    #import <Foundation/Foundation.h>
     #import "y.tab.h"
     #import "MessageBlocks.h"
 
-    // [a-zA-Z]+ { yylval.identifier = [NSString stringWithFormat:@"%s", yytext]; return IDENTIFIER; }
-
     void yyerror(char *s);
-
 %}
 
     // MARK: - Lexing
@@ -23,6 +20,9 @@
 
     /* Skip whitespaces */
 [\n\t ] { }
+
+    /* Recognize IDENTIFIER token */
+[a-zA-Z]+ { yylval.identifier = [NSString stringWithFormat:@"%s", yytext]; return IDENTIFIER; }
 
     /* Catch all rule */
 . { return yytext[0]; };

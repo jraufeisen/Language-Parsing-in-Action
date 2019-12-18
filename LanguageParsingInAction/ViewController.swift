@@ -12,7 +12,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buf = yy_scan_string("3+5+6*2")
+        let buf = yy_scan_string("3+5+6*2-pi")
         ParseTestSuccessBlock = { (value) in
             print("I calculated \(value)")
         }
@@ -21,6 +21,7 @@ class ViewController: NSViewController {
         }
         yyparse()
         yy_delete_buffer(buf)
+
         // Do any additional setup after loading the view.
     }
 

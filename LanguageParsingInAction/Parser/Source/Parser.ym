@@ -3,16 +3,15 @@
 %{
     #import <Foundation/Foundation.h>
     #import "MessageBlocks.h"
-
     int yylex(void);
     void yyerror(char *s);
     
 %}
 
-
 // Represents the data that we want to access through our string
 %union {
     float     value;
+    __unsafe_unretained NSString* identifier;
 }
 
 // Define our terminal symbols (tokens)
@@ -32,7 +31,6 @@
 // The grammar rule with which we wanna start the parsing process
 %start calc
 
-
 // MARK: - Parsing rules
 %%
 
@@ -44,7 +42,7 @@ expr : number { $$ = $1; }
 
 number : INTEGER { $$ = $1; }
 | FLOAT { $$ = $1; }
-//| IDENTIFIER { if ([$1 isEqualToString:@"pi"]) $$ = M_PI; else $$ = 0.0; [$1 release]; }
+| IDENTIFIER { if ([$1 isEqualToString:@"pi"]) $$ = M_PI; else $$ = 0.0; }
 
 calc : expr { if (ParseTestSuccessBlock) ParseTestSuccessBlock($1); }
 
