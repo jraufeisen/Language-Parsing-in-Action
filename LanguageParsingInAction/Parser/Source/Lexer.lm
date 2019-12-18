@@ -1,34 +1,41 @@
+    // MARK: - Objective-C Header
 %{
+    // We can embed Objective-C code inside the .lex or .yacc file
+    // Either enclose the code with %{ and %}
+    // Or indent code with a TAB
 
-#import "y.tab.h"
-#import "MessageBlocks.h"
-   // [a-zA-Z]+ { yylval.identifier = [NSString stringWithFormat:@"%s", yytext]; return IDENTIFIER; }
+    #import "y.tab.h"
+    #import "MessageBlocks.h"
 
-void yyerror(char *s);
-    
+    // [a-zA-Z]+ { yylval.identifier = [NSString stringWithFormat:@"%s", yytext]; return IDENTIFIER; }
+
+    void yyerror(char *s);
+
 %}
 
+    // MARK: - Lexing
 %%
-
+    /* Recognize FLOAT token */
 [0-9]+\.[0-9]* { yylval.value = atof(yytext); return FLOAT; }
 
+    /* Recognize INTEGER token */
 [0-9]+ { yylval.value = atof(yytext); return INTEGER; }
 
-
+    /* Skip whitespaces */
 [\n\t ] { }
 
+    /* Catch all rule */
 . { return yytext[0]; };
-
 %%
 
-int yywrap()
-{
-    // This is a place where one can append more text if it would be needed, quit for now
-    return 1;
-}
+    // MARK: - Objective-C Implementation
+    int yywrap() {
+        // This is a place where one can append more text if it would be needed, quit for now
+        return 1;
+    }
 
-void yyerror(char *s)
-{
-    if (ParseTestFailBlock)
-        ParseTestFailBlock([NSString stringWithFormat:@"%s", s]);
-}
+    void yyerror(char *s) {
+        if (ParseTestFailBlock) {
+            ParseTestFailBlock([NSString stringWithFormat:@"%s", s]);
+        }
+    }

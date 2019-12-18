@@ -1,34 +1,40 @@
+    // MARK: - Definitions
+    // See https://www2.cs.arizona.edu/~debray/Teaching/CSc453/DOCS/tutorial-large.pdf for a tutorial
 %{
+    #import <Foundation/Foundation.h>
+    #import "MessageBlocks.h"
 
-#import <Foundation/Foundation.h>
-#import "MessageBlocks.h"
-
-int yylex(void);
-void yyerror(char *s);
-
+    int yylex(void);
+    void yyerror(char *s);
+    
 %}
 
+
+// Represents the data that we want to access through our string
 %union {
     float     value;
-    //NSString *identifier;
 }
 
+// Define our terminal symbols (tokens)
+// These match the tokens as we define them in the lexer
 %token <value> INTEGER
 %token <value> FLOAT
-
 %token <identifier> IDENTIFIER
 
+// Define the rules that should apply to each of the %union elements
 %type <value> expr
 %type <value> number
 
-//%destructor { [$$ release]; } IDENTIFIER
-
+// Operator precedence
 %left '+' '-'
 %left '*' '/'
 
-%%
+// The grammar rule with which we wanna start the parsing process
+%start calc
 
-calc : expr { if (ParseTestSuccessBlock) ParseTestSuccessBlock($1); }
+
+// MARK: - Parsing rules
+%%
 
 expr : number { $$ = $1; }
 | expr '*' expr { $$ = $1 * $3; }
@@ -39,5 +45,8 @@ expr : number { $$ = $1; }
 number : INTEGER { $$ = $1; }
 | FLOAT { $$ = $1; }
 //| IDENTIFIER { if ([$1 isEqualToString:@"pi"]) $$ = M_PI; else $$ = 0.0; [$1 release]; }
+
+calc : expr { if (ParseTestSuccessBlock) ParseTestSuccessBlock($1); }
+
 
 %%
