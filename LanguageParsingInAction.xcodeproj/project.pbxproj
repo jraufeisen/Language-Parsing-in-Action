@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB399E3023ABD76200DA62D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB399E2F23ABD76200DA62D2 /* AppDelegate.swift */; };
+		EB399E3223ABD76200DA62D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB399E3123ABD76200DA62D2 /* SceneDelegate.swift */; };
+		EB399E3423ABD76200DA62D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB399E3323ABD76200DA62D2 /* ViewController.swift */; };
+		EB399E3723ABD76200DA62D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB399E3523ABD76200DA62D2 /* Main.storyboard */; };
+		EB399E3923ABD76300DA62D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB399E3823ABD76300DA62D2 /* Assets.xcassets */; };
+		EB399E3C23ABD76300DA62D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB399E3A23ABD76300DA62D2 /* LaunchScreen.storyboard */; };
+		EB399E4123ABD77300DA62D2 /* Lexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = EBB9360D239BDF9D00F75E7C /* Lexer.lm */; };
+		EB399E4223ABD77600DA62D2 /* Parser.ym in Sources */ = {isa = PBXBuildFile; fileRef = EBB9360B239BDF9D00F75E7C /* Parser.ym */; };
+		EB399E4323ABD77C00DA62D2 /* MessageBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB93616239BE09200F75E7C /* MessageBlocks.m */; };
 		EBB935F9239BDF3000F75E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB935F8239BDF3000F75E7C /* AppDelegate.swift */; };
 		EBB935FB239BDF3000F75E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB935FA239BDF3000F75E7C /* ViewController.swift */; };
 		EBB935FD239BDF3200F75E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB935FC239BDF3200F75E7C /* Assets.xcassets */; };
@@ -17,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB399E2D23ABD76200DA62D2 /* LanguageParsingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageParsingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB399E2F23ABD76200DA62D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB399E3123ABD76200DA62D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EB399E3323ABD76200DA62D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB399E3623ABD76200DA62D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB399E3823ABD76300DA62D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB399E3B23ABD76300DA62D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB399E3D23ABD76300DA62D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB399E4423ABD78C00DA62D2 /* LanguageParsingCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LanguageParsingCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBB935F5239BDF3000F75E7C /* LanguageParsingInAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageParsingInAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB935F8239BDF3000F75E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB935FA239BDF3000F75E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EB399E2A23ABD76200DA62D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB935F2239BDF3000F75E7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +67,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB399E2E23ABD76200DA62D2 /* LanguageParsingCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				EB399E2F23ABD76200DA62D2 /* AppDelegate.swift */,
+				EB399E3123ABD76200DA62D2 /* SceneDelegate.swift */,
+				EB399E3323ABD76200DA62D2 /* ViewController.swift */,
+				EB399E4423ABD78C00DA62D2 /* LanguageParsingCalculator-Bridging-Header.h */,
+				EB399E3523ABD76200DA62D2 /* Main.storyboard */,
+				EB399E3823ABD76300DA62D2 /* Assets.xcassets */,
+				EB399E3A23ABD76300DA62D2 /* LaunchScreen.storyboard */,
+				EB399E3D23ABD76300DA62D2 /* Info.plist */,
+			);
+			path = LanguageParsingCalculator;
+			sourceTree = "<group>";
+		};
 		EBB935EC239BDF3000F75E7C = {
 			isa = PBXGroup;
 			children = (
 				EBB935F7239BDF3000F75E7C /* LanguageParsingInAction */,
+				EB399E2E23ABD76200DA62D2 /* LanguageParsingCalculator */,
 				EBB935F6239BDF3000F75E7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB935F5239BDF3000F75E7C /* LanguageParsingInAction.app */,
+				EB399E2D23ABD76200DA62D2 /* LanguageParsingCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +137,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EB399E2C23ABD76200DA62D2 /* LanguageParsingCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB399E4023ABD76300DA62D2 /* Build configuration list for PBXNativeTarget "LanguageParsingCalculator" */;
+			buildPhases = (
+				EB399E2923ABD76200DA62D2 /* Sources */,
+				EB399E2A23ABD76200DA62D2 /* Frameworks */,
+				EB399E2B23ABD76200DA62D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LanguageParsingCalculator;
+			productName = LanguageParsingCalculator;
+			productReference = EB399E2D23ABD76200DA62D2 /* LanguageParsingCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EBB935F4239BDF3000F75E7C /* LanguageParsingInAction */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB93605239BDF3200F75E7C /* Build configuration list for PBXNativeTarget "LanguageParsingInAction" */;
@@ -122,6 +181,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Johannes Raufeisen";
 				TargetAttributes = {
+					EB399E2C23ABD76200DA62D2 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					EBB935F4239BDF3000F75E7C = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -141,11 +203,22 @@
 			projectRoot = "";
 			targets = (
 				EBB935F4239BDF3000F75E7C /* LanguageParsingInAction */,
+				EB399E2C23ABD76200DA62D2 /* LanguageParsingCalculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EB399E2B23ABD76200DA62D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB399E3C23ABD76300DA62D2 /* LaunchScreen.storyboard in Resources */,
+				EB399E3923ABD76300DA62D2 /* Assets.xcassets in Resources */,
+				EB399E3723ABD76200DA62D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB935F3239BDF3000F75E7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +231,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EB399E2923ABD76200DA62D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB399E3423ABD76200DA62D2 /* ViewController.swift in Sources */,
+				EB399E3023ABD76200DA62D2 /* AppDelegate.swift in Sources */,
+				EB399E3223ABD76200DA62D2 /* SceneDelegate.swift in Sources */,
+				EB399E4323ABD77C00DA62D2 /* MessageBlocks.m in Sources */,
+				EB399E4223ABD77600DA62D2 /* Parser.ym in Sources */,
+				EB399E4123ABD77300DA62D2 /* Lexer.lm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB935F1239BDF3000F75E7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +259,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EB399E3523ABD76200DA62D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB399E3623ABD76200DA62D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB399E3A23ABD76300DA62D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB399E3B23ABD76300DA62D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		EBB935FE239BDF3200F75E7C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -184,6 +286,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EB399E3E23ABD76300DA62D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YLJFWRHN2U;
+				INFOPLIST_FILE = LanguageParsingCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jraufeisen.LanguageParsingCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "LanguageParsingCalculator/LanguageParsingCalculator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB399E3F23ABD76300DA62D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YLJFWRHN2U;
+				INFOPLIST_FILE = LanguageParsingCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jraufeisen.LanguageParsingCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "LanguageParsingCalculator/LanguageParsingCalculator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		EBB93603239BDF3200F75E7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +487,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EB399E4023ABD76300DA62D2 /* Build configuration list for PBXNativeTarget "LanguageParsingCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB399E3E23ABD76300DA62D2 /* Debug */,
+				EB399E3F23ABD76300DA62D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EBB935F0239BDF3000F75E7C /* Build configuration list for PBXProject "LanguageParsingInAction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
